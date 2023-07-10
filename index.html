@@ -6,6 +6,7 @@
     body {
       background-color: #000;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -15,7 +16,7 @@
 
     h1 {
       font-family: 'Arial Black', Arial, sans-serif;
-      font-size: 48px;
+      font-size: 72px;
       color: #fff;
       text-align: center;
       animation: neonGlow 1s ease-in-out infinite alternate;
@@ -32,24 +33,35 @@
 
     .button {
       display: inline-block;
-      background-color: #00ff00;
-      color: #000;
-      font-family: 'Arial', sans-serif;
-      font-size: 20px;
+      background-color: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      font-family: 'Arial Black', Arial, sans-serif;
+      font-size: 24px;
       padding: 10px 20px;
       border-radius: 4px;
       text-decoration: none;
       transition: background-color 0.3s ease;
+      animation: glow 1s ease-in-out infinite alternate;
     }
 
     .button:hover {
       background-color: #fff;
-      color: #00ff00;
+      color: #000;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px #fff;
+      }
+      100% {
+        box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Coming Soon, -Vallian.</h1>
-  <a href="mailto:vallian476@gmail.com" class="button">Hubungi Kami</a>
+  <a href="mailto:vallian476@gmail.com" class="button">Contact</a>
 </body>
 </html>
