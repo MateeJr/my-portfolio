@@ -4,19 +4,30 @@
   <title>Coming Soon</title>
   <style>
     body {
-      background-color: #fff;
+      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
+      overflow: hidden;
     }
 
     h1 {
       font-family: 'Arial Black', Arial, sans-serif;
       font-size: 48px;
-      color: #000;
+      color: #00ff00;
       text-align: center;
+      animation: neonGlow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes neonGlow {
+      0% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+      }
+      100% {
+        text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+      }
     }
   </style>
 </head>
